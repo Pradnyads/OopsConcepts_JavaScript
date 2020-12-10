@@ -1,0 +1,23 @@
+{
+    "Tcs":[
+        {
+            "shareName" : "Pravin",  
+            "noOfShare" : "5",
+            "priceOfShare" : "7000"
+        }
+    ],
+    "Infosys":[
+        {
+            "shareName" : "Preetam",
+            "noOfShare" : "7",
+            "priceOfShare" :"9000"
+        }
+    ],
+    "Vipro":[
+        {
+            "shareName" : "Rishi",
+            "noOfShare" : "9",
+            "priceOfShare" :"5000"
+        }
+    ]
+}
