@@ -1,6 +1,13 @@
+/*******************************************************************************
+* @problem : Json objects of Stock of Comapnies and calculate total stock price
+* @fileName : StockManagementBusinessLogic.js
+* @Auther : Pradnya D. S.
+/*******************************************************************************/
+
 const fs = require("fs");
 const data = fs.readFileSync("./StockManagement.JSON");
 let stockData = JSON.parse(data);
+//class of Stock contain different method calcutating total price of stack
 class Stock {
   constructor(...param) {
     this.name = param[0];
