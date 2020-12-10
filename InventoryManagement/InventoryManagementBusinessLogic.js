@@ -1,3 +1,9 @@
+/************************************************************************************
+* @problem : Json objects of rice,pulses and wheat,calculated total price of Element
+* @fileName : InventoryManagementBusinessLogic.js
+* @Auther : Pradnya D. S.
+/************************************************************************************/
+
 class Base {
     constructor (...param){
         this.name = param[0];

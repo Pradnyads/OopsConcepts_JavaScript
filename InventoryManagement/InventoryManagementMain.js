@@ -1,7 +1,12 @@
+/**************************************************************************************
+* @problem : Json objects of rice,pulses and wheat, calculate total price of Elements
+* @fileName : InventoryManagementMain.js
+* @Auther : Pradnya D. S.
+/**************************************************************************************/
 const fs = require("fs");
 const Data = fs.readFileSync("./InventoryManagement.json");
 let grains = JSON.parse(Data);
-const Base = require("./InventoryBusinessLogic");
+const Base = require("./InventoryManagementBusinessLogic");
 
 function riceTotal() {
   console.log(grains.Rice);
