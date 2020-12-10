@@ -1,0 +1,55 @@
+{
+  "Rice": [
+    {
+      "name": "Basmati",
+      "weight": "10",
+      "price": "90"
+    },
+    {
+      "name": "Kolum",
+      "weight": "15",
+      "price": "60"
+    },
+    {
+      "name": "Indrayani",
+      "weight": "7",
+      "price": "40"
+    }
+  ],
+
+  "Wheat": [
+    {
+      "name": "Gujrati",
+      "weight": "12",
+      "price": "30"
+    },
+    {
+      "name": "Bansi",
+      "weight": "10",
+      "price": "35"
+    },
+    {
+      "name": "Agarkar",
+      "weight": "15",
+      "price": "32"
+    }
+  ],
+
+  "Pulses": [
+    {
+      "name": "Moong",
+      "weight": "5",
+      "price": "80"
+    },
+    {
+      "name": "Masur",
+      "weight": "4",
+      "price": "60"
+    },
+    {
+      "name": "Tur",
+      "weight": "7",
+      "price": "70"
+    }
+  ]
+}
