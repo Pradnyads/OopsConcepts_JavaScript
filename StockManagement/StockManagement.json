@@ -1,23 +1,24 @@
 {
-    "Tcs":[
-        {
-            "shareName" : "Pravin",  
-            "noOfShare" : "5",
-            "priceOfShare" : "7000"
-        }
-    ],
-    "Infosys":[
-        {
-            "shareName" : "Preetam",
-            "noOfShare" : "7",
-            "priceOfShare" :"9000"
-        }
-    ],
-    "Vipro":[
-        {
-            "shareName" : "Rishi",
-            "noOfShare" : "9",
-            "priceOfShare" :"5000"
-        }
-    ]
+  "company": [
+    {
+      "shareName": "Tcs",
+      "noOfShare": "5",
+      "priceOfShare": "7000"
+    },
+    {
+      "shareName": "Infosys",
+      "noOfShare": "7",
+      "priceOfShare": "9000"
+    },
+    {
+      "shareName": "vipro",
+      "numberOfShares": 7,
+      "sharePrice": 700
+    },
+    {
+      "shareName": "Bridgelabz",
+      "numberOfShares": 5,
+      "sharePrice": 500
+    }
+  ]
 }

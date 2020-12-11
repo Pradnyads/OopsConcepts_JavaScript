@@ -5,31 +5,31 @@
 /*******************************************************************************/
 
 let fs = require("fs");
-const { stringify } = require("querystring");
 let readlineSync = require("readLine-Sync");
 const data = fs.readFileSync("./StockManagement.json");
 let stockData = JSON.parse(data);
 let Stock = require("./StockManagementBusinessLogic");
 
-//Methods are defined for calculate total stock price
+//Methods are called for calculate total stock price
 function stockManagement() {
   for (i = 1; i < 10; i++) {
     let input = readlineSync.question(
-      "enter choice : 1.Tcs 2.Infosys 3.Vipro 4.exit:"
+      "enter choice : 1.Add Shares 2.Display Shares 3.Total Shares 4.Exit:"
     );
     if (input == 4) return;
     switch (parseInt(input)) {
       case 1:
-        console.log(stockData.Tcs);
-        console.log(Stock.tcs());
+        let Company = readlineSync.question("Enter name of company: ");
+        let numOfShares = readlineSync.questionInt("Enter number of shares: ");
+        let price = readlineSync.questionInt("Enter price of Share: ");
+        Stock.addShare(Company, numOfShares, price);
+        Stock.save();
         break;
       case 2:
-        console.log(stockData.Infosys);
-        console.log(Stock.infosys());
+        console.log(Stock.display());
         break;
       case 3:
-        console.log(stockData.Vipro);
-        console.log(Stock.vipro());
+        console.log(Stock.calculation());
         break;
       case 4:
         console.log("Exit");
@@ -40,9 +40,5 @@ function stockManagement() {
     }
   }
 }
-console.log(stockManagement(parseInt()));
+stockManagement();
 
-//const jsonString = JSON.stringify(Stock.tcs())
-//fs.writeFileSync('./StockManagement.json', jsonString);
-//fs.writeFileSync('./StockManagment.json', tcs.push(jsonString));
-//console.log("Data stored sucessfully")

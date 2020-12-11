@@ -7,35 +7,45 @@
 const fs = require("fs");
 const data = fs.readFileSync("./StockManagement.JSON");
 let stockData = JSON.parse(data);
-//class of Stock contain different method calcutating total price of stack
+
+//class of Stock contain different methods calcutating total price of stack
 class Stock {
   constructor(...param) {
-    this.name = param[0];
-    this.number = param[1];
-    this.price = param[2];
+    this.shareName = param[0];
+    this.noOfShare = param[1];
+    this.priceOfShare = param[2];
+  }
+  
+  stockAccount() {
+    stockData.company[stockData.company.length] = [];
+  }
+  
+  addShare(shareName, noOfShare, priceOfShare) {
+    let stock = {
+      shareName: shareName,
+      numberOfShares: noOfShare,
+      sharePrice: priceOfShare,
+    };
+    stockData.company[stockData.company.length] = stock;
   }
 
-  tcs() {
-    let tcsTotalShare = 0;
-    stockData.Tcs.forEach((element) => {
-      tcsTotalShare = element.noOfShare * element.priceOfShare;
-    });
-    return "Total of TCS shares is :" + tcsTotalShare;
+  display() {
+    return stockData;
   }
-  infosys() {
-    let infosysTotalShare = 0;
-    stockData.Infosys.forEach((element) => {
-      infosysTotalShare = element.noOfShare * element.priceOfShare;
-    });
-    return "Total of Infosys shares is :" + infosysTotalShare;
-  }
-  vipro() {
-    let viproTotalShare = 0;
-    stockData.Vipro.forEach((element) => {
-      viproTotalShare = element.noOfShare * element.priceOfShare;
-    });
 
-    return "Total of Vipro shares is :" + viproTotalShare;
+  calculation() {
+    let sharesTotal = 0;
+    stockData.company.forEach((element) => {
+      sharesTotal = element.priceOfShare * element.noOfShare;
+    });
+    return " Total shares of Company:" + sharesTotal;
+
+  }
+  
+  save() {
+    fs.writeFileSync(
+      "./StockManagement.JSON",JSON.stringify(stockData, null, 2)
+    );
   }
 }
 
