@@ -3,22 +3,27 @@
     {
       "shareName": "Tcs",
       "noOfShare": "5",
-      "priceOfShare": "7000"
+      "sharePrice": "700"
     },
     {
       "shareName": "Infosys",
       "noOfShare": "7",
-      "priceOfShare": "9000"
-    },
-    {
-      "shareName": "vipro",
-      "numberOfShares": 7,
-      "sharePrice": 700
+      "sharePrice": "900"
     },
     {
       "shareName": "Bridgelabz",
-      "numberOfShares": 5,
+      "noOfShare": 5,
       "sharePrice": 500
+    },
+    {
+      "shareName": "Wipro",
+      "noOfShare": 5,
+      "sharePrice": 750
+    },
+    {
+      "shareName": "TATA",
+      "noOfShare": 9,
+      "sharePrice": 900
     }
   ]
 }

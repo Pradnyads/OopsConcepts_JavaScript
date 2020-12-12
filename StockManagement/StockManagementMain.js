@@ -29,7 +29,7 @@ function stockManagement() {
         console.log(Stock.display());
         break;
       case 3:
-        console.log(Stock.calculation());
+        console.log(Stock.calculation(parseInt()));
         break;
       case 4:
         console.log("Exit");

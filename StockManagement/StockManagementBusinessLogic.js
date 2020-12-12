@@ -15,16 +15,16 @@ class Stock {
     this.noOfShare = param[1];
     this.priceOfShare = param[2];
   }
-  
+
   stockAccount() {
     stockData.company[stockData.company.length] = [];
   }
-  
-  addShare(shareName, noOfShare, priceOfShare) {
+
+  addShare(shareName, noOfShare, sharePrice) {
     let stock = {
       shareName: shareName,
-      numberOfShares: noOfShare,
-      sharePrice: priceOfShare,
+      noOfShare: noOfShare,
+      sharePrice: sharePrice,
     };
     stockData.company[stockData.company.length] = stock;
   }
@@ -36,15 +36,25 @@ class Stock {
   calculation() {
     let sharesTotal = 0;
     stockData.company.forEach((element) => {
-      sharesTotal = element.priceOfShare * element.noOfShare;
+      sharesTotal =
+        sharesTotal + parseInt(element.sharePrice * element.noOfShare);
     });
-    return " Total shares of Company:" + sharesTotal;
 
+    stockData.company.forEach((element) => {
+      console.log(
+        element.shareName +
+          " shares is Rs. " +
+          element.sharePrice * element.noOfShare
+      );
+    });
+
+    return "Total of shares is Rs." + sharesTotal;
   }
-  
+
   save() {
     fs.writeFileSync(
-      "./StockManagement.JSON",JSON.stringify(stockData, null, 2)
+      "./StockManagement.JSON",
+      JSON.stringify(stockData, null, 2)
     );
   }
 }
